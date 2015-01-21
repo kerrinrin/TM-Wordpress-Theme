@@ -81,7 +81,7 @@ html {
 }
 
 body {
-	background: #fff; /* Fallback for when there is no custom background color defined. */
+	background: #141414; /* Fallback for when there is no custom background color defined. */
 }
 
 article,
@@ -637,6 +637,7 @@ x.x Header
     padding: 10px 50px;
     position: fixed;
     width: 100%;
+    z-index: 999;
     
 }
 
@@ -880,7 +881,7 @@ cursor: pointer;
 
 }
 
-.main-cat-grid {
+.main-cat-grid, .cat-grid {
     
    display: -webkit-box;      
   display: -moz-box;        
@@ -898,17 +899,24 @@ cursor: pointer;
 .main-cat-grid li {
     
     width: 25%;
+    padding: 5px;
     position: relative;
     display: inline-block;
-}
+} 
 
+.cat-grid li {
+      width: 20%;
+      padding: 5px;
+    position: relative;
+    display: inline-block; 
+}
 
 /*main image transition*/
 
 h4 { 
    position: absolute; 
-  bottom: 19px;
-   left: -20px; 
+  bottom: 24px;
+   left: -15px; 
    width: 100%; 
    padding-left: 20px;
 }
@@ -958,5 +966,79 @@ background: rgba(230, 38, 55, 0.8);
  padding-top: 15px;
  
 }
+ 
+
+.page-title {
+   text-align: center; 
+  font-family: 'Open Sans', 'sans-serif';
+  color: #fff;
+    font-size: 4em;
+    font-weight: 300;
+    margin-bottom:20px;   
+
+}
 
 
+/*secondary post grid*/
+
+/*hovery stuff*/
+
+ 
+
+
+ .box {  
+  
+    cursor: pointer;  
+    height: 250px;  
+    float: left;  
+    margin: 5px;  
+    position: relative;  
+    overflow: hidden;  
+    width: 250px;  
+  
+}  
+  
+ .box img {  
+    position: absolute;  
+    left: 0;  
+    -webkit-transition: all 300ms ease-out;  
+    -moz-transition: all 300ms ease-out;  
+    -o-transition: all 300ms ease-out;  
+    -ms-transition: all 300ms ease-out;  
+    transition: all 300ms ease-out;  
+}  
+
+
+.box .caption {  
+    font-family: "Open Sans";
+    font-size: .9em;
+    
+    position: absolute;  
+    color: #fff;  
+    z-index: 100;  
+    -webkit-transition: all 300ms ease-out;  
+    -moz-transition: all 300ms ease-out;  
+    -o-transition: all 300ms ease-out;  
+    -ms-transition: all 300ms ease-out;  
+    transition: all 300ms ease-out;  
+    left: 0;  
+    opacity: 0;  
+    width: 100%;  
+    height: 100%;  
+    text-align: left;  
+    padding: 15px;
+    line-height: 20px;
+}  
+
+.box h3 {
+    
+    font-family: "Francois One";
+    font-size: 1.9em;
+    line-height: 26px;
+    padding-bottom: 10px;
+}
+ 
+
+ .box:hover .fade-caption {  
+    opacity: 1;  
+}   
